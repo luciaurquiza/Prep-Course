@@ -69,7 +69,7 @@ function tienenMismaLongitud(str1, str2) {
   // De lo contrario, devuelve "false"
   // Tu código:
 
-  return str1 === str2;
+  return str1.length === str2.length;
 }
 
 
@@ -97,7 +97,11 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num / 2 === 0;
+  if( num % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
   
 }
 
@@ -105,7 +109,11 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  return num / 2 !== 0;
+  if(num % 2 === 1) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function elevarAlCuadrado(num) {
@@ -159,21 +167,21 @@ function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
-  return str + "!"
+  return str + "!";
 }
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  return '$(nombre) $(apellido)';
+  var combinado = nombre + ' ' + apellido;
+  return combinado;
 }
-
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return 'hola $(nombre)!';
+  return 'Hola ' + nombre + '!';
 }
 
 
@@ -206,8 +214,8 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   if (letra.length > 1) return  "Dato incorrecto";
-  if (letra ==! "a" || letra ==! "e" || letra ==! "i" || letra ==! "o" || letra ==! "u") return  "Dato incorrecto";
   if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") return "Es vocal";
+  return "Dato incorrecto";
 }
 
 
